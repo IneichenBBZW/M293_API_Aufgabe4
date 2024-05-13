@@ -1,26 +1,8 @@
 export class ToDo {
-  #titel = "";
-  #erledigt = "";
-
+  
   constructor(titel, erledigt) {
-    this.#titel = titel;
-    this.#erledigt = erledigt;
-  }
-
-  get titel() {
-    return this.#titel;
-  }
-
-  set titel(titel) {
-    this.#titel = titel;
-  }
-
-  get erledigt() {
-    return this.#erledigt;
-  }
-
-  set erledigt(erledigt) {
-    this.#erledigt = erledigt;
+    this.titel = titel;
+    this.erledigt = erledigt;
   }
 
   element() {
@@ -40,10 +22,10 @@ export class ToDo {
 
     buttonElement.className = "loeschen";
 
-    spanElement.innerText = this.#titel;
+    spanElement.innerText = this.titel;
     buttonElement.innerText = "Löschen";
 
-    if (this.#erledigt) {
+    if (this.erledigt) {
       checkboxElement.setAttribute("checked", "checked");
       divElement.className = "erledigt";
     }
